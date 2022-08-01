@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+        }
+
+        form input {
+            padding: 5px 10px;
+        }
+  </style>
+</head>
+<body>
+  <form>
+    <h4> RIWAYAT pencarian</h4>
+    <div class="search-history"></div>
+   </form> 
+  <script> function clearSearchHistory() {
+    localStorage.removeItem("searchKey"); // menghapus data pada localStorage dengan key "searchKey"
+    document.getElementById('search-history').innerHTML = ""; // mengosongkan riwayat pencarian
+  }</script>
+</body>
+</html>
